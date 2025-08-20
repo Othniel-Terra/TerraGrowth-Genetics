@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TerraGrowth Genetics</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333; }
+    header { background: #2b7a0b; color: white; padding: 20px 0; text-align: center; }
+    nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
+    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+    h1, h2 { color: #2b7a0b; }
+    footer { background: #222; color: white; text-align: center; padding: 20px 0; }
+    .service { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    form input, form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    form button { background: #2b7a0b; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    form button:hover { background: #1a4f05; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TerraGrowth Genetics</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to TerraGrowth Genetics</h2>
+    <p>Your trusted partner in plant breeding and genetics, delivering innovative agricultural solutions to boost crop quality and sustainability.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Led by Dr. Mark Owusu Adjei, an expert in plant breeding and genetics, TerraGrowth Genetics combines scientific expertise with practical solutions for farmers and agricultural businesses.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service">
+      <h3>Plant Breeding Consultation</h3>
+      <p>Expert guidance on breeding programs to improve crop yield, disease resistance, and sustainability.</p>
+    </div>
+    <div class="service">
+      <h3>Genetic Analysis</h3>
+      <p>Advanced genetic testing and analysis to optimize plant performance and traits.</p>
+    </div>
+    <div class="service">
+      <h3>Agri-solutions & Training</h3>
+      <p>Practical training for farmers and agribusinesses on modern breeding techniques and sustainable agriculture.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: info@terragrowthgenetics.com | Phone: +233 000 000 000</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TerraGrowth Genetics. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
